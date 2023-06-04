@@ -1,0 +1,140 @@
+.btns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+body {
+    height: 100%;
+    box-sizing: border-box;
+    background: rgb(22,2,22);
+    background: linear-gradient(0deg, rgba(22,2,22,1) 0%, rgba(69,1,49,1) 100%);
+}
+
+
+.city {
+    visibility: hidden;
+}
+
+.deactive {
+    visibility: hidden;
+}
+.active{
+    visibility: inherit;
+}
+
+.trueChoice{
+    fill: greenyellow !important;
+}
+.wrongChoice{
+    fill: gray !important;
+}
+.scores{
+    visibility: hidden;
+}
+.scores.active{
+    visibility: initial;
+}
+
+
+
+.p {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.map {
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: auto;
+
+    transform: scale(1.4);
+
+}
+
+.map.active {
+    visibility: inherit;
+    opacity: 1;
+}
+
+.navbar .nav-link {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    padding-left: 0.7rem !important;
+    padding-right: 0.7rem !important;
+}
+
+.map svg {
+    padding-left: 200px;
+    height: 500px;
+    width: 90%;
+    max-width: 1200px;
+    display: block;
+}
+
+.land {
+    fill: lightseagreen;
+    fill-opacity: 1;
+    stroke: white;
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+}
+
+.land:not(.selectedCity):hover {
+    cursor: pointer;
+    color: black;
+    fill: wheat;
+    fill-opacity: 1;
+    stroke: white;
+    stroke-opacity: 1;
+    stroke-width: 0.5;
+}
+
+.info_panel {
+    background-color: rgba(255, 255, 255, .8);
+    padding: 5px;
+    font-size: 12px;
+    font-family: Helvetica, Arial, sans-serif;
+    position: absolute;
+    border: 1px solid #333;
+    color: #333;
+    white-space: nowrap;
+}
+
+.info_panel::first-line {
+    font-weight: bold;
+
+}
+
+.map-info {
+    height: 200px;
+}
+
+
+.text {
+
+    text-anchor: middle;
+    fill: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .map svg {
+        padding-left: 60px;
+        height: 250px;
+        margin-top: 50px;
+    }
+
+    .btns {
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .btn_start {
+        width: 200px;
+    }
+
+    .btn_settings {
+        width: 200px;
+    }
+}
